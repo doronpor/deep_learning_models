@@ -1,0 +1,16 @@
+[tool.ruff]
+line-length = 88
+target-version = "py39"
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle
+    "F",   # pyflakes
+    "I",   # isort
+    "PLR", # pylint refactor
+]
+ignore = ["PLR2004"]  # Ignore magic number warnings
+
+[tool.black]
+line-length = 88
+target-version = ['py39'] 

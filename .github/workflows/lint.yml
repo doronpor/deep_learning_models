@@ -24,10 +24,10 @@ jobs:
         pip install ruff black isort
         
     - name: Check formatting with Black
-      run: black . --check --diff --line-length=88
+      run: black . --check --diff
         
     - name: Check imports with isort
       run: isort . --check-only --diff --profile black
         
     - name: Lint with Ruff
-      run: ruff check . 
+      run: ruff check . --config pyproject.toml 
